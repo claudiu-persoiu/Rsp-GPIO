@@ -1,7 +1,10 @@
 import RPi.GPIO as GPIO
+
 led_pin = 11
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(led_pin, GPIO.OUT)
+
 pwm_led = GPIO.PWM(led_pin, 500)
 pwm_led.start(100)
 
@@ -10,5 +13,8 @@ try:
 		duty_s = raw_input("Enter brightness level between 0 and 100):")
 		duty = int(duty_s)
 		pwm_led.ChangeDutyCycle(duty)
+except KeyboardInterrupt:
+	pass
+
 finally:
 	GPIO.cleanup()

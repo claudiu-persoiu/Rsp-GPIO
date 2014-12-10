@@ -17,5 +17,7 @@ try:
       led_state = not led_state
     old_input_state = new_input_state
     GPIO.output(led_pin, led_state)
+except KeyboardInterrupt:
+  pass
 finally:
   GPIO.cleanup()

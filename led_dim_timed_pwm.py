@@ -16,5 +16,8 @@ try:
 		for i in range(100):
 			time.sleep(0.01)
 			pwm_led.ChangeDutyCycle(100 - i)
+except KeyboardInterrupt:
+	pass
+
 finally:
 	GPIO.cleanup()

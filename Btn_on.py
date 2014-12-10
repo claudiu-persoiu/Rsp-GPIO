@@ -12,5 +12,7 @@ try:
   while True:
     led_state = GPIO.input(switch_pin)
     GPIO.output(led_pin, led_state)
+except KeyboardInterrupt:
+  pass
 finally:
   GPIO.cleanup()
