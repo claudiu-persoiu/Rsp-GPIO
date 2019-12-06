@@ -16,9 +16,9 @@ class Shifter:
     def display(self, str):
         for c in str:
             if c is '1':
-                GPIO.output(self.data_in,GPIO.HIGH)
-            else:
                 GPIO.output(self.data_in,GPIO.LOW)
+            else:
+                GPIO.output(self.data_in,GPIO.HIGH)
             self._tick()    
             
         GPIO.output(self.data_in, GPIO.LOW)

@@ -1,6 +1,7 @@
 from DisplayMatrixText import DisplayMatrixText
+from DisplayMatrix import DisplayMatrix
 
-display_text = DisplayMatrixText(speed = .5)
+display_text = DisplayMatrixText(speed = .5, display_matrix = DisplayMatrix())
 
 try:
     while True:
